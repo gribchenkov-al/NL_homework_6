@@ -60,7 +60,7 @@ public class Company {
         } else {
             taxSystem = new TaxUSNDohod();
         }
-        System.out.println("Поменяли систему налогооблажения на " + getTaxSystemString());
+        System.out.println("Поменяли систему налогообложения на " + getTaxSystemString());
 
     }
 

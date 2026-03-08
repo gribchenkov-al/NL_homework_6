@@ -14,7 +14,7 @@ public class Main {
         Deal[] deals = {new Sale("Гайка", 200), new Sale("Болт", 200), new Sale("Мороженка", 200), new Expenditure("Сигареты", 100)};
         System.out.println("Разница между тратами и доходами до оплаты налогов " + company.applyDeals(deals));
 
-        System.out.println("Поменяем систему налогооблажения");
+        System.out.println("Поменяем систему налогообложения");
         company.setTaxSystem();
         company.shiftMoney(2000);
         company.shiftMoney(-20000);
