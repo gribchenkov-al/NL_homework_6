@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Company company = new Company("Сетевой дозор", new TaxUSNDohod());
         System.out.println(company.title);
-        System.out.println("У компании система налогооблажения " + company.getTaxSystemString());
+        System.out.println("У компании система налогообложения " + company.getTaxSystemString());
         company.shiftMoney(2000);
         company.shiftMoney(-20000);
         company.payTaxes();
