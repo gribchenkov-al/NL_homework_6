@@ -10,4 +10,8 @@ public class TaxUSNDohodRashod extends TaxSystem {
         }
 
     }
+
+    public String getDescription() {
+        return "УСН Доход - расход";
+    }
 }

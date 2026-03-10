@@ -1,13 +1,9 @@
 import taxes.TaxSystem;
-import taxes.TaxUSNDohod;
-import taxes.TaxUSNDohodRashod;
-
-import java.util.Scanner;
 
 public class Company {
     public String title;
-    public int debit;
-    public int credit;
+    protected int debit;
+    protected int credit;
     public TaxSystem taxSystem;
 
     public Company(String company, TaxSystem taxSystem) {
@@ -52,24 +48,15 @@ public class Company {
         System.out.println("Компания " + title + " уплатила налог в размере " + sum + " Руб.");
     }
 
-    public void setTaxSystem() {
+    public void setTaxSystem(TaxSystem newTaxSystem) {
 
-
-        if (taxSystem instanceof TaxUSNDohod) {
-            taxSystem = new TaxUSNDohodRashod();
-        } else {
-            taxSystem = new TaxUSNDohod();
-        }
-        System.out.println("Поменяли систему налогообложения на " + getTaxSystemString());
+        this.taxSystem = newTaxSystem;
+        System.out.println("Поменяли систему налогообложения");
 
     }
 
     public String getTaxSystemString() {
-        if (taxSystem instanceof TaxUSNDohod) {
-            return "УСН Доходы";
-        } else {
-            return "УСН Доход - расход";
-        }
+        return taxSystem.getDescription();
     }
 
 

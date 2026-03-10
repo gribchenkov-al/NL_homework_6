@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Разница между тратами и доходами до оплаты налогов " + company.applyDeals(deals));
 
         System.out.println("Поменяем систему налогообложения");
-        company.setTaxSystem();
+        company.setTaxSystem(new TaxUSNDohod());
         company.shiftMoney(2000);
         company.shiftMoney(-20000);
         company.payTaxes();
@@ -24,9 +24,10 @@ public class Main {
         System.out.println("________________________________ВТОРАЯ КОМПАНИЯ________________________________");
 
 
-        Company company1 = new Company("Рога и копыьа", new TaxUSNDohodRashod());
+        Company company1 = new Company("Рога и копыта", new TaxUSNDohodRashod());
         System.out.println(company1.getTaxSystemString());
         System.out.println(company1.title);
+        company1.setTaxSystem(new TaxUSNDohod());
         company1.shiftMoney(200);
         company1.shiftMoney(-2000);
         company1.payTaxes();

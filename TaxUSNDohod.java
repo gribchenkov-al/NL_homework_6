@@ -7,4 +7,8 @@ public class TaxUSNDohod extends TaxSystem {
         return (int) (debit * 0.06);
     }
 
+    public String getDescription() {
+        return "УСН Доходы";
+    }
+
 }

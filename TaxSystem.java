@@ -5,5 +5,7 @@ public abstract class TaxSystem {
         return 0;
     }
 
+    public abstract String getDescription();
+
 
 }
